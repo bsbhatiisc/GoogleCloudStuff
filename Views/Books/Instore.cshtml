@@ -1,0 +1,26 @@
+﻿@model LibraryAppGCP.Models.BookRepo
+@{
+    ViewBag.Title = "BookRepo";
+}
+
+<h2>Book Repository</h2>
+
+<table style="width:100%;">
+    <tr>
+        <td>Book ID</td>
+        <td>Book Name</td>
+        <td>Book Stream</td>
+        <td>Book Location</td>
+    </tr>
+    @foreach (var book in Model.BookList)
+    {
+        <tr>
+            <td>@book.ID</td>
+            <td>@book.Name</td>
+            <td>@book.Stream</td>
+            <td>@book.Location</td>
+        </tr>
+    }
+
+</table>
+
